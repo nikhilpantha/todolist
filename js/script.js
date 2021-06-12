@@ -208,7 +208,7 @@ function signupsubmit(e) {
     }
 
     if (usersignupdetials.email.match(emailRegex)) {
-      if (usersignupdetials.password.length > 0) {
+      if (usersignupdetials.password.length > 5) {
         if (
           usersignupdetials.password ===
           signupform.signupconformpasswordinput.value
@@ -319,7 +319,7 @@ function forgetsubmit(e) {
         forgetform.forgetpasswordinput.value ===
         forgetform.forgetconformpasswordinput.value
       ) {
-        if (forgetform.forgetpasswordinput.value > 6) {
+        if (forgetform.forgetpasswordinput.value > 5) {
           let replacepassword = JSON.parse(
             localStorage.getItem(forgetform.forgetEmailInput.value)
           );
