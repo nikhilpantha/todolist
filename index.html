@@ -5,30 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <script
-      src="https://kit.fontawesome.com/b285609d78.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>ToDo list</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Todo list</title>
   </head>
   <body>
-    <div class="contain">
-      <header>ToDo List</header>
-      <form action="#" class="todoform">
-        <label>Full Name:</label>
-        <input type="text" id="inputname" placeholder="full Name" />
-        <label>Email address:</label>
-        <input type="email" id="inputemail" placeholder="email address" />
-        <div id="message"></div>
-        <button type="submit" id="submitbutton">Submit</button>
-      </form>
-      <div class="todocontainer">
-        <h2>list</h2>
-        <div id="todolist"></div>
-      </div>
-    </div>
+    <section>
+      <div id="login" class="login">
+        <div class="box">
+          <div class="userimage">
+            <i class="fa fa-user"></i>
+          </div>
+          <form id="logininputform" class="open">
+            <div class="inputfield">
+              <div><i class="fa fa-user icon"></i></div>
+              <input
+                type="email"
+                placeholder="user email"
+                id="loginEmailInput"
+              />
+            </div>
+            <div class="inputfield">
+              <div><i class="fa fa-key icon"></i></div>
+              <input
+                type="password"
+                placeholder="password"
+                id="loginpasswordinput"
+              />
+            </div>
+            <div class="errormessage"></div>
+            <button type="submit" id="logininputsubmit">Log In</button>
+            <div class="signuptext">
+              Don't have a account? <a id="signuplink"> SignUp</a><br />
+              <a id="forgotpassword">Forgot Password ?</a>
+            </div>
+          </form>
 
+          <!--  -->
+
+          <form id="signupinputform" class="closed">
+            <div class="inputfield">
+              <div><i class="fa fa-user icon"></i></div>
+              <input type="name" placeholder="username " id="signupNameInput" />
+            </div>
+            <div class="inputfield">
+              <div><i class="fa fa-envelope icon"></i></div>
+              <input type="email" placeholder="email" id="signupEmailInput" />
+            </div>
+            <div class="inputfield">
+              <div><i class="fa fa-key icon"></i></div>
+              <input
+                type="password"
+                placeholder="password"
+                id="signuppasswordinput"
+              />
+            </div>
+            <div class="inputfield">
+              <div><i class="fa fa-key icon"></i></div>
+              <input
+                type="password"
+                placeholder="conform password"
+                id="signupconformpasswordinput"
+              />
+            </div>
+            <div class="errormessage"></div>
+            <button type="submit" id="sinupinputsubmit">Sign Up</button>
+            <div class="signuptext">
+              Already have a account? <a id="loginlink"> LogIn</a><br />
+            </div>
+          </form>
+
+          <!--  -->
+
+          <form id="forgetform" class="closed">
+            <div class="inputfield">
+              <div><i class="fa fa-envelope icon"></i></div>
+              <input type="email" placeholder="email" id="forgetEmailInput" />
+            </div>
+            <div class="inputfield">
+              <div><i class="fa fa-key icon"></i></div>
+              <input
+                type="password"
+                placeholder="password"
+                id="forgetpasswordinput"
+              />
+            </div>
+            <div class="inputfield">
+              <div><i class="fa fa-key icon"></i></div>
+              <input
+                type="password"
+                placeholder="conform password"
+                id="forgetconformpasswordinput"
+              />
+            </div>
+            <div class="errormessage"></div>
+            <button type="submit" id="forgetsubmit">Submit</button>
+            <div class="signuptext">
+              Want to login account? <a id="forgetlink">LogIn</a><br />
+              Don't have a account? <a id="signuplink"> SignUp</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>

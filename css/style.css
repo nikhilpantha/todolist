@@ -1,78 +1,152 @@
-html {
+/* 
+.fa-trash,
+.fa-edit {
+  pointer-events: none;
+} */
+
+* {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 body {
+  background-color: #eee;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login {
+  margin-top: 8%;
+  height: auto;
+  width: 30%;
+  display: block;
+  border-radius: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-radius: 10px;
+
+  background-color: #29b1d1;
+}
+
+.userimage i {
+  background-color: #4d4d4d;
+  color: #29b1d1;
+  margin-top: -5rem;
+  border: 15px solid #eee;
+  font-size: 5rem;
+  border-radius: 50%;
+  padding: 1rem 1.7rem;
+}
+
+form {
+  width: 70%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputfield {
+  display: flex;
+  border-radius: 5px;
+  justify-content: start;
+  align-content: center;
+  margin: 10px;
+  height: 30px;
+  background-color: #eee;
+  overflow-x: scroll;
+}
+.exploreLocation::-webkit-scrollbar {
+  width: 0;
+}
+
+.inputfield i {
+  text-align: center;
+  min-width: 40px;
+  height: 30px;
+  font-size: 20px;
+  color: #eee;
+  background-color: #4d4d4d;
+  padding: 5px 10px;
+}
+
+.inputfield input {
+  font-weight: 100;
+  color: #4d4d4d;
+  font-size: 15px;
+  flex: 1;
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
+
+form button {
+  word-spacing: 2px;
+  font-size: 20px;
+  background-color: #4d4d4d;
+  color: #eee;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  margin: 50px 0px;
+}
+
+.signuptext {
+  text-align: center;
+  margin: 20px 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.contain {
-  margin: 10% 30%;
-  border-radius: 10px;
-  border: 2px solid #222;
-}
-
-header {
-  font-size: 2rem;
-  display: flex;
-  margin: 30px 0;
-  justify-content: center;
-  align-items: center;
-}
-form {
-  margin: 10px 20px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-#message {
-  margin: 10px;
-  grid-column: 2/3;
-  color: red;
-  font-size: 10px;
-  font-weight: 100;
-}
-form button {
-  grid-column: 2/3;
-  margin-top: 20px;
-  font-size: 1rem;
-  width: 50%;
-}
-
-.todocontainer {
-  border-top: 1px solid rgb(209, 209, 209);
-  width: 100%;
-  text-align: center;
-}
-
-.tododiv {
-  display: flex;
-  margin: 0px;
-  padding: 0 0px 0 10px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(223, 223, 223);
-  text-align: left;
-  overflow: hidden;
-}
-
-.namelist {
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-.emaillist {
-  font-size: 13px;
-  font-weight: 100px;
-}
-.trashbutton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: red;
+.signuptext a {
   color: #eee;
-  height: 40px;
-  width: 40px;
+  cursor: pointer;
+}
+.signuptext a:hover {
+  text-decoration: underline;
 }
 
-.fa-trash {
-  pointer-events: none;
+.closed {
+  display: none;
+}
+.open {
+  display: flex;
+}
+.errormessage {
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: rgb(255, 71, 71);
+  font-size: 15px;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 460px) {
+  #login {
+    margin-top: 40%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 460px) and (max-width: 760px) {
+  #login {
+    margin-top: 20%;
+
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 960px) {
+  #login {
+    margin-top: 20%;
+
+    width: 60%;
+  }
 }
