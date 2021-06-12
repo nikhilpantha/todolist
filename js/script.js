@@ -218,7 +218,7 @@ function signupsubmit(e) {
               usersignupdetials.email,
               JSON.stringify(usersignupdetials)
             );
-            document.location.href = "todo.html";
+            document.location.href = "page/index.html";
             signupform.signupNameInput.value = "";
             signupform.signupEmailInput.value = "";
           } else {
@@ -271,7 +271,7 @@ function loginsubmit(e) {
       const user = JSON.parse(localStorage.getItem(localStorage.key(va[1])));
 
       if (loginform.loginpasswordinput.value === user.password) {
-        document.location.href = "todo.html";
+        document.location.href = "page/index.html";
         loginform.loginEmailInput.value = "";
       } else {
         errortext.innerText = "email or password is incorrect";
